@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 import entitie.Client;
 import entitie.Order;
+import entitie.Product;
 import entitieenum.OrderStatus;
 
 public class Program {
@@ -38,6 +39,17 @@ public class Program {
 		  int n = sc.nextInt();
 		  
 		  for (int i = 1; i <= n; i++) {
+			  System.out.println("Enter #"+ i + " item data:");
+			  System.out.print("Product name: ");
+			  String product = sc.nextLine();
+			  System.out.print("Product price: ");
+			  double price = sc.nextDouble();
+			  
+			  Product prod = new Product(product, price);
+			  
+			  System.out.print("Quantity: ");
+			  int quantity = sc.nextInt();
+			  
 			  
 		  }
 		  
