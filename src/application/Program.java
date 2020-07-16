@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 import entitie.Client;
 import entitie.Order;
+import entitie.OrderItem;
 import entitie.Product;
 import entitieenum.OrderStatus;
 
@@ -50,11 +51,16 @@ public class Program {
 			  System.out.print("Quantity: ");
 			  int quantity = sc.nextInt();
 			  
+			  OrderItem orderItem = new OrderItem(quantity, price, prod);
+			  
+			  order.addItem(orderItem);
 			  
 		  }
 		  
 		  
-		  
+		  System.out.println();
+		  System.out.println("ORDER SUMMARY:");
+		  System.out.println(order);
 		  
 		  sc.close();
 		  

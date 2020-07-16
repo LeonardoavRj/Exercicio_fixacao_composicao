@@ -26,6 +26,13 @@ public class Order {
 		this.status = status;
 	}
 
+	public Order(Date moment, OrderStatus status, Client client) {
+		super();
+		this.moment = moment;
+		this.status = status;
+		this.client = client;
+	}
+
 	public Date getMoment() {
 		return moment;
 	}
@@ -41,6 +48,19 @@ public class Order {
 	public void setStatus(OrderStatus status) {
 		this.status = status;
 	}
+	
+	public Client getClient() {
+		return client;
+	}
+
+	public void setClient(Client client) {
+		this.client = client;
+	}
+
+	public List<OrderItem> getItems() {
+		return items;
+	}
+
 	public void addItem(OrderItem item) {
 		items.add(item);
 	}
