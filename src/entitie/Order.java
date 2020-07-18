@@ -7,6 +7,8 @@ import java.util.List;
 
 import entitieenum.OrderStatus;
 
+
+
 public class Order {
 	
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss"); 
@@ -64,9 +66,11 @@ public class Order {
 	public void addItem(OrderItem item) {
 		items.add(item);
 	}
+	@SuppressWarnings("unlikely-arg-type")
 	public void removeItem(OrderStatus item) {
-		items.remove(item);
+	   items.remove(item);
 	}
+	
 	public double total() {
 		double sum = 0.0;
 		for (OrderItem item : items) {
